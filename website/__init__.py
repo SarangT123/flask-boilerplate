@@ -1,4 +1,5 @@
-from flask import Flask , Blueprint
+from flask import Flask, Blueprint
+
 
 def create_app():
     app = Flask(__name__)
@@ -6,11 +7,11 @@ def create_app():
 
     # Importing the view and auth .py's
     from .views import views
-    from .auth import auth
+    from .ath import ath
     from .admin import admin
 
     # Registering those blueprints
     app.register_blueprint(views, url_prefix='/')
-    app.register_blueprint(auth, url_prefix='/')
+    app.register_blueprint(ath, url_prefix='/')
     app.register_blueprint(admin, url_prefix='/')
     return app

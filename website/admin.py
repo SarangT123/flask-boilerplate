@@ -1,8 +1,9 @@
-from flask import Flask, Blueprint , render_template , redirect ,url_for , request
+from flask import Flask, Blueprint, render_template, redirect, url_for, request
 
-views = Blueprint('views', __name__)
+admin = Blueprint('admin', __name__)
 
-@views.route('/admin')
+
+@admin.route('/admin')
 def admin_login():
     if request.method == 'POST':
         return
